@@ -433,7 +433,7 @@ Ouvrez une [issue](https://github.com/bryanyaobd/sql-to-nosql-converter/issues) 
 
 **⭐ N'oubliez pas de mettre une étoile si ce projet vous aide ! ⭐**
 
-**Made with ❤️ and ☕ by [Votre Nom](https://github.com/votre-username)**
+**Made with ❤️ and ☕ by [Votre Nom](https://github.com/bryanyaobd)**
 
 ---
 
