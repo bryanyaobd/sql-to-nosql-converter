@@ -1,0 +1,147 @@
+.sql-editor-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  animation: slideIn 0.5s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sql-editor-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(59, 130, 246, 0.35);
+}
+
+/* HEADER */
+.card-header {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-icon {
+  color: #60a5fa;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #e5e7eb;
+  margin: 0;
+}
+
+/* BADGE */
+.sql-badge {
+  background: rgba(59, 130, 246, 0.15);
+  backdrop-filter: blur(10px);
+  color: #93c5fd;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+/* EDITOR */
+.editor-container {
+  display: flex;
+  background: #020617;
+  min-height: 420px;
+  max-height: 520px;
+  overflow: auto;
+}
+
+/* LINE NUMBERS */
+.line-numbers {
+  background: rgba(30, 41, 59, 0.9);
+  padding: 20px 12px;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid rgba(148, 163, 184, 0.15);
+  min-width: 50px;
+}
+
+.line-number {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.8;
+  height: 27px;
+}
+
+/* TEXTAREA */
+.sql-textarea {
+  flex: 1;
+  padding: 20px;
+  border: none;
+  background: transparent;
+  color: #e5e7eb;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  resize: none;
+  outline: none;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+}
+
+.sql-textarea::placeholder {
+  color: #475569;
+}
+
+/* ERROR */
+.error-banner {
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+}
+
+/* FOOTER */
+.editor-footer {
+  background: rgba(15, 23, 42, 0.8);
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  padding: 12px 20px;
+}
+
+.footer-info {
+  display: flex;
+  gap: 20px;
+  font-size: 0.8125rem;
+  color: #94a3b8;
+}
+
+.info-item strong {
+  color: #e5e7eb;
+  margin-right: 4px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

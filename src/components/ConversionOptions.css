@@ -1,0 +1,92 @@
+/* === CONTAINER OPTIONS (GLASS) === */
+.conversion-options {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  margin-bottom: 24px;
+
+  animation: fadeIn 0.5s ease;
+}
+
+/* === HEADER === */
+.options-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+
+  color: #e5e7eb;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* === GRID === */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+/* === OPTION BUTTON (GLASS) === */
+.option-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 0.875rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* === HOVER ULTRA CLEAN === */
+.option-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(148, 163, 184, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  color: #e5e7eb;
+}
+
+/* === ACTIVE (SÉLECTIONNÉ) === */
+.option-btn.active {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-color: #10b981;
+  color: white;
+
+  box-shadow: 0 8px 28px rgba(16, 185, 129, 0.45);
+}
+
+/* === ICON === */
+.option-btn svg {
+  flex-shrink: 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}

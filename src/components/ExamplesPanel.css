@@ -1,0 +1,154 @@
+/* === PANEL GLOBAL === */
+.examples-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* === HEADER === */
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: #e5e7eb;
+}
+
+.panel-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* === GRID === */
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+/* === CARD GLASS === */
+.example-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 14px;
+  padding: 20px;
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Ligne d’accent top (plus subtile) */
+.example-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* === HOVER ULTRA CLEAN === */
+.example-card:hover {
+  transform: translateY(-4px);
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(148, 163, 184, 0.3);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.55);
+}
+
+.example-card:hover::before {
+  opacity: 1;
+}
+
+/* === HEADER CARD === */
+.example-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.example-type {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* === ARROW === */
+.example-arrow {
+  color: #94a3b8;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.example-card:hover .example-arrow {
+  transform: translateX(6px);
+  color: #3b82f6;
+}
+
+/* === TEXT === */
+.example-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e5e7eb;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.example-card:hover .example-title {
+  color: #ffffff;
+}
+
+.example-description {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* === CODE PREVIEW === */
+.example-code {
+  background: rgba(2, 6, 23, 0.9);
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.example-code code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
